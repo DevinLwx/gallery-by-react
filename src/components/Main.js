@@ -1,5 +1,6 @@
 require('normalize.css/normalize.css');
 require('styles/App.css');
+require('../styles/main.scss');
 
 import React from 'react';
 // 获取图片相关的数据
@@ -18,7 +19,19 @@ let getImageURL = (imageDatasArr)=> {
 }
 
 imageDatas = getImageURL(imageDatas)
-console.log(imageDatas)
+
+class ImaFigure extends React.Component {
+  render() {
+    return (
+      <figure>
+        <img/>
+        <figcaption>
+          <h2></h2>
+        </figcaption>
+      </figure>
+    );
+  }
+}
 
 class AppComponent extends React.Component {
   render() {
